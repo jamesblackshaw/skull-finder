@@ -11,7 +11,7 @@ radio.onReceivedNumber(function (receivedNumber) {
         signal = radio.receivedPacket(RadioPacketProperty.SignalStrength)
         tempo = 220 + signal
         led.setBrightness(290 - signal)
-        if (signal < -90) {
+        if (signal < -80) {
             music.setVolume(193)
             music.playSoundEffect(music.createSoundEffect(WaveShape.Sine, 500, 500, 216, 117, 800, SoundExpressionEffect.Vibrato, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
             music.playSoundEffect(music.createSoundEffect(WaveShape.Sine, 500, 500, 216, 117, 800, SoundExpressionEffect.Vibrato, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
@@ -20,7 +20,7 @@ radio.onReceivedNumber(function (receivedNumber) {
             basic.showIcon(IconNames.Heart)
             basic.showIcon(IconNames.No)
             basic.clearScreen()
-        } else if (signal < -60) {
+        } else if (signal < -50) {
             music.setVolume(239)
             music.playSoundEffect(music.createSoundEffect(WaveShape.Sine, 954, 508, 255, 157, 500, SoundExpressionEffect.Warble, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
             music.playSoundEffect(music.createSoundEffect(WaveShape.Sine, 954, 508, 255, 157, 500, SoundExpressionEffect.Warble, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
